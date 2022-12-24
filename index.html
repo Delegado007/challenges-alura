@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!-- first include tsParticles engine -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine"></script>
+
+    <!-- then include any tsParticles plugin needed -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles/tsparticles.bundle.min.js"></script>
+
+    <!-- then include jquery wrapper -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-particles"></script>
+    <script>
+      $(document).ready(async function () {
+        await loadFull(tsParticles);
+
+        $("#tsparticles")
+          .particles()
+          .ajax("jsonParticles.json", function (container) {
+            // container is the particles container where you can play/pause or stop/start.
+            // the container is already started, you don't need to start it manually.
+          });
+
+        // or
+      });
+    </script>
+    <script src="./index.js"></script>
+    <title>Challenges Alura</title>
+  </head>
+  <body>
+    <div id="tsparticles">
+      <div class="container">
+        <div class="logo">
+          <img src="./assets/logo.png" alt="DelegadoDev" />
+        </div>
+        <div class="input-container">
+          <div class="input">
+            <textarea
+              name=""
+              class="textarea"
+              placeholder="Introduce tu texto aquí"
+            ></textarea>
+          </div>
+          <div class="container-btn-requisitos">
+            <div class="requisitos">
+              <img src="./assets/exclamacion.svg" alt="atención" />
+              <span>Solo letras minúsculas y sin acentos</span>
+            </div>
+            <div class="container-buttons">
+              <button id="btn-encriptar">Encriptar</button>
+              <button id="btn-desencriptar">Desencriptar</button>
+            </div>
+          </div>
+        </div>
+        <div class="output-container">
+          <!-- " -->
+          <div class="notVisible bloque-resultado">
+            <textarea id="texto-encriptado"></textarea>
+            <div class="bloque-btn-copy">
+              <img src="./assets/copy-solid.svg" alt="boton copiar" />
+              <button class="btn-copiar">Copiar al portapapeles</button>
+            </div>
+          </div>
+          <div class="empty-message">
+            <div>
+              <img
+                src="./assets/muneco.svg"
+                alt="muñeco con lupa"
+                class="muneco"
+              />
+            </div>
+            <div>
+              <h3>Ningún mensaje fue encontrado</h3>
+            </div>
+            <div>
+              <span>Ingresa el texto que desees encriptar o desencriptar.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
