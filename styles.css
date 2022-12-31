@@ -74,7 +74,7 @@ textarea:focus {
   }
   .container .output-container {
     width: calc(100% - 144px);
-    margin: 200px 40px 40px 40px;
+    margin: 24px 40px 40px 40px;
   }
   .output-container .muneco {
     display: none;
@@ -116,7 +116,7 @@ textarea:focus {
   }
   .container .output-container {
     min-width: calc(100% - 112px);
-    margin: 200px 24px 40px 24px;
+    margin: 24px 24px 40px 24px;
   }
   .output-container .muneco {
     display: none;
@@ -134,7 +134,6 @@ textarea:focus {
 .input-container {
   background-color: transparent;
   width: calc(100% - 440px);
-  height: 100vh;
 }
 
 .input {
